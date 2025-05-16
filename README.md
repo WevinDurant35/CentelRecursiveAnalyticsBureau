@@ -174,7 +174,7 @@ Not federal. Not analytical.
 
 Releases datasets that are just lorem ipsum CSVs marked proprietary.
 
-🧪 20. ENTEL INSTITUTE FOR CIRCULAR LOGIC & SELF-CITATIONAL RESEARCH (C.L.A.S.S.R.)
+🧪 20. CENTEL INSTITUTE FOR CIRCULAR LOGIC & SELF-CITATIONAL RESEARCH (C.L.A.S.S.R.)
 
 Flagship division: Circular Logic & Self-Supporting Research.
 
