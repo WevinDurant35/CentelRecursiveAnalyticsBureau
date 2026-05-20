@@ -1,0 +1,886 @@
+%PDF-1.3
+%‚„œ”
+1 0 obj
+<<
+/Type /Pages
+/Count 2
+/Kids [ 3 0 R 4 0 R ]
+>>
+endobj
+2 0 obj
+<<
+/Producer (PyPDF2)
+/NeedAppearances true
+>>
+endobj
+3 0 obj
+<<
+/Type /Page
+/Parent 1 0 R
+/Resources <<
+/ExtGState <<
+/gRLs0 <<
+/ca 0.5
+>>
+>>
+/Font <<
+/F1 6 0 R
+/F1c8ead1d9-abd1-4ba3-bdeb-e8aefdbb010d <<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+/F2 7 0 R
+>>
+/ProcSet [ /ImageI /ImageC /ImageB /PDF /Text ]
+>>
+/Contents 8 0 R
+/MediaBox [ 0 0 595.28 841.89 ]
+/Annots [ ]
+>>
+endobj
+4 0 obj
+<<
+/Type /Page
+/Parent 1 0 R
+/Resources <<
+/ExtGState <<
+/gRLs0 <<
+/ca 0.5
+>>
+>>
+/Font <<
+/F1 6 0 R
+/F107831e0d-04e0-4781-b577-030eca15686a <<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+/F2 7 0 R
+>>
+/ProcSet [ /ImageI /ImageC /ImageB /PDF /Text ]
+>>
+/Contents 9 0 R
+/MediaBox [ 0 0 595.28 841.89 ]
+/Annots [ ]
+>>
+endobj
+5 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+/AcroForm 2 0 R
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/BaseFont /Courier
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+>>
+endobj
+7 0 obj
+<<
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+8 0 obj
+<<
+/Length 7342
+>>
+stream
+q
+2 J
+0.57 w
+BT
+/F1 8 Tf
+ET
+q
+0 g
+BT
+31.18 805.47 Td
+(\055\055\040PLUMPAY\040LABFRAME\040V1\040\055\055\040Master\040Simulation\040Framework\040\050SANITIZED\040RESEARCH\040EDITION\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 794.14 Td
+(\055\055\040Safe\040for\040local\040terminal\055based\040simulation\056\040No\040NFC\040or\040BLE\040hardware\040interaction\056) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 782.8 Td
+(\055\055\040All\040identifiers\040are\040pseudorandom\056\040No\040personal\040paths\054\040no\040real\040UUIDs\056\040) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 762.95 Td
+(\055\055\040Log\040Handler) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 751.62 Td
+(on\040logEvent\050msg\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 740.28 Td
+(\011set\040timestamp\040to\040\050do\040shell\040script\040\042date\040\047\053\045Y\055\045m\055\045d\040\045H\072\045M\072\045S\047\042\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 728.94 Td
+(\011do\040shell\040script\040\042echo\040\042\040\046\040quoted\040form\040of\040\050\042\133\042\040\046\040timestamp\040\046\040\042\135\040\042\040\046\040msg\051\040\046\040\042\040\076\076\040\176\057plumpay\137terminal\056log\042) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 717.6 Td
+(end\040logEvent) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 697.76 Td
+(\055\055\040Tool\040Check\040\050uses\040placeholder\040binary\040paths\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 686.42 Td
+(on\040verifyTools\050\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 675.08 Td
+(\011try) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 663.74 Td
+(\011\011do\040shell\040script\040\042\057usr\057local\057simtools\057bin\057blueutil\040\055\055version\042) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 652.4 Td
+(\011\011do\040shell\040script\040\042\057usr\057local\057simtools\057bin\057openssl\040version\042) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 641.06 Td
+(\011\011logEvent\050\042\133TOOLS\135\040blueutil\040and\040openssl\040verified\040in\040simtools\040path\056\042\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 629.73 Td
+(\011on\040error) Tj
+ET
+Q
+1.755 Tw
+q
+0 g
+BT
+31.19 618.39 Td
+(\011\011display\040dialog\040\042Missing\040tools\040in\040\057usr\057local\057simtools\057bin\057\056\040Install\040blueutil\040\053\040openssl\056\042\040buttons\040\173\042Abort\042\175) Tj
+ET
+Q
+0 Tw
+q
+0 g
+BT
+31.19 607.05 Td
+(default\040button\040\042Abort\042) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 595.71 Td
+(\011\011error\040\042Missing\040tools\056\040Abort\056\042) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 584.37 Td
+(\011end\040try) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 573.03 Td
+(end\040verifyTools) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 553.19 Td
+(\055\055\040Secure\040Element\040Simulation\040\050Abstracted\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 541.85 Td
+(on\040seCoreSim\050transactionInput\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 530.51 Td
+(\011logEvent\050\042\133SE\135\040Processing\040transaction\040input\056\056\056\042\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 519.18 Td
+(\011set\040entropyMod\040to\040do\040shell\040script\040\042\057usr\057local\057simtools\057bin\057openssl\040rand\040\055hex\0404\042) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 507.84 Td
+(\011set\040noiseMod\040to\040\042SIMULATED\137NOISE\042) Tj
+ET
+Q
+0.273 Tw
+q
+0 g
+BT
+31.19 496.5 Td
+(\011set\040structuredCore\040to\040do\040shell\040script\040\042echo\040\042\040\046\040quoted\040form\040of\040\050transactionInput\040\046\040entropyMod\040\046\040noiseMod\051\040\046\040\042) Tj
+ET
+Q
+0 Tw
+q
+0 g
+BT
+31.19 485.16 Td
+(\174\040\057usr\057local\057simtools\057bin\057openssl\040dgst\040\055sha512\040\174\040cut\040\055d\047\040\047\040\055f2\042) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 473.82 Td
+(\011logEvent\050\042\133SE\135\040Synthetic\040cryptogram\040generated\072\040\042\040\046\040structuredCore\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 462.48 Td
+(\011return\040structuredCore) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 451.14 Td
+(end\040seCoreSim) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 431.3 Td
+(\055\055\040UID\040Drift\040Logger) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 419.96 Td
+(on\040driftLog\050\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 408.62 Td
+(\011logEvent\050\042\133DRIFT\135\040Scanning\040UID\040echo\040drift\056\056\056\042\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 397.29 Td
+(\011set\040uidStub\040to\040\042SIMULATED\137UID\042) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 385.95 Td
+(\011set\040delta\040to\040\050random\040number\040from\0400\056018\040to\0400\056062\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 374.61 Td
+(\011logEvent\050\042\133DRIFT\135\040UID\072\040F4\072B7\072DC\072\042\040\046\040uidStub\040\046\040\042\040\174\040Delta\075\042\040\046\040delta\040\046\040\042us\040\174\040Entropy\040stable\056\042\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 363.27 Td
+(end\040driftLog) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 343.43 Td
+(\055\055\040EchoFrame\040Predictor) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 332.09 Td
+(on\040echoPredict\050\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 320.75 Td
+(\011logEvent\050\042\133ECHOFRAME\135\040Generating\040predictive\040spoof\040payload\056\056\056\042\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 309.41 Td
+(\011set\040prePayload\040to\040do\040shell\040script\040\042\057usr\057local\057simtools\057bin\057openssl\040rand\040\055hex\0404\042) Tj
+ET
+Q
+0.006 Tw
+q
+0 g
+BT
+31.19 298.07 Td
+(\011set\040driftHint\040to\040do\040shell\040script\040\042echo\040\042\040\046\040prePayload\040\046\040\042\040\174\040\057usr\057local\057simtools\057bin\057openssl\040dgst\040\055sha256\040\174\040cut) Tj
+ET
+Q
+0 Tw
+q
+0 g
+BT
+31.19 286.73 Td
+(\055d\047\040\047\040\055f2\042) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 275.4 Td
+(\011set\040echoPayload\040to\040do\040shell\040script\040\042echo\040\042\040\046\040driftHint\040\046\040\042\040\174\040rev\040\174\040cut\040\055c1\05524\042) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 264.06 Td
+(\011logEvent\050\042\133ECHOFRAME\135\040Predicted\040spoof\072\040\042\040\046\040echoPayload\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 252.72 Td
+(\011return\040echoPayload) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 241.38 Td
+(end\040echoPredict) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 221.54 Td
+(\055\055\040Ghostnet\055Compatible\040Beacon\040\050Simulated\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 210.2 Td
+(on\040ghostRelay\050\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 198.86 Td
+(\011logEvent\050\042\133RELAY\135\040Ghostnet\040burst\040initialized\056\042\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 187.52 Td
+(\011do\040shell\040script\040\042\057usr\057local\057simtools\057bin\057blueutil\040\055\055power\0401\042) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 176.18 Td
+(\011do\040shell\040script\040\042echo\040\047\133GHOSTNET\135\040Phantom\040BLE\040pulse\040broadcasted\040\050simulated\051\056\047\040\076\076\040\176\057plumpay\137terminal\056log\042) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 164.84 Td
+(\011delay\040\050random\040number\040from\0402\040to\0404\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 153.51 Td
+(\011do\040shell\040script\040\042\057usr\057local\057simtools\057bin\057blueutil\040\055\055power\0400\042) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 142.17 Td
+(end\040ghostRelay) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 122.32 Td
+(\055\055\040Simulated\040NFC\040Injection) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 110.99 Td
+(on\040nfcSimTap\050fakePayload\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 99.65 Td
+(\011logEvent\050\042\133NFC\135\040Simulating\040NFC\040tap\056\056\056\042\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 88.31 Td
+(\011delay\0401) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 76.97 Td
+(\011logEvent\050\042\133NFC\135\040Payload\040injected\040into\040field\072\040\042\040\046\040fakePayload\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 65.63 Td
+(\011logEvent\050\042\133NFC\135\040Terminal\040response\072\040Delayed\040approval\040\055\055\040backend\040fallback\040in\040effect\056\042\051) Tj
+ET
+Q
+Q
+q
+0 0 612 792 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1c8ead1d9-abd1-4ba3-bdeb-e8aefdbb010d 12 Tf
+14.4 TL
+ET
+BT
+/F2 36 Tf
+43.2 TL
+ET
+0.5 g
+/gRLs0 gs
+q
+0.86603 0.5 -0.5 0.86603 300 100 cm
+BT
+1 0 0 1 -257.022 0 Tm
+(SANITIZED\040RESEARCH\040COPY) Tj
+T*
+ET
+Q
+Q
+
+endstream
+endobj
+9 0 obj
+<<
+/Length 3476
+>>
+stream
+q
+2 J
+0.57 w
+BT
+/F1 8 Tf
+ET
+q
+0 g
+BT
+31.19 805.47 Td
+(end\040nfcSimTap) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 785.63 Td
+(\055\055\040Mock\040Issuer\040Response) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 774.29 Td
+(on\040issuerResponse\050fakePayload\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 762.95 Td
+(\011logEvent\050\042\133ISSUER\135\040Verifying\040cryptogram\056\056\056\042\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 751.61 Td
+(\011set\040randApprove\040to\040\050random\040number\040from\0401\040to\04010\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 740.27 Td
+(\011if\040randApprove\040\076\0403\040then) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 728.94 Td
+(\011\011logEvent\050\042\133ISSUER\135\040AUTHORIZED\072\040Payload\040accepted\040with\040minor\040drift\040tolerance\056\042\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 717.6 Td
+(\011else) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 706.26 Td
+(\011\011logEvent\050\042\133ISSUER\135\040DENIED\072\040Signature\040entropy\040failed\040checksum\040range\056\042\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 694.92 Td
+(\011end\040if) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 683.58 Td
+(end\040issuerResponse) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 663.74 Td
+(\055\055\040Master\040Simulation\040Loop) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 652.4 Td
+(on\040plumpaySimLoop\050\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 641.06 Td
+(\011logEvent\050\042\133LOOP\135\040PlumPay\040Frame\040Initiated\056\042\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 629.72 Td
+(\011set\040transInput\040to\040\042TX\137\042\040\046\040\050do\040shell\040script\040\042uuidgen\040\174\040cut\040\055c1\0556\042\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 618.38 Td
+(\011set\040sePayload\040to\040seCoreSim\050transInput\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 607.05 Td
+(\011driftLog\050\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 595.71 Td
+(\011set\040predicted\040to\040echoPredict\050\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 584.37 Td
+(\011nfcSimTap\050predicted\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 573.03 Td
+(\011issuerResponse\050predicted\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 561.69 Td
+(\011ghostRelay\050\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 550.35 Td
+(\011logEvent\050\042\133LOOP\135\040End\040frame\056\042\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 539.01 Td
+(end\040plumpaySimLoop) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 519.17 Td
+(\055\055\040UI\040Launcher) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 507.83 Td
+(try) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 496.49 Td
+(\011display\040dialog\040\042Launch\040PlumPay\040LabFrame\040V1\040simulation\077\042\040buttons\040\173\042Cancel\042\054\040\042Run\042\175\040default\040button\040\042Run\042) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 485.16 Td
+(\011if\040button\040returned\040of\040result\040is\040\042Run\042\040then) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 473.82 Td
+(\011\011verifyTools\050\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 462.48 Td
+(\011\011repeat\0403\040times) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 451.14 Td
+(\011\011\011plumpaySimLoop\050\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 439.8 Td
+(\011\011\011delay\0402) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 428.46 Td
+(\011\011end\040repeat) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 417.12 Td
+(\011\011display\040dialog\040\042Simulation\040complete\056\040Logs\040saved\040to\040\176\057plumpay\137terminal\056log\042\040buttons\040\173\042OK\042\175\040default\040button\040\042OK\042) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 405.79 Td
+(\011end\040if) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 394.45 Td
+(on\040error\040errMsg) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 383.11 Td
+(\011logEvent\050\042\133ERROR\135\040\042\040\046\040errMsg\051) Tj
+ET
+Q
+q
+0 g
+BT
+31.19 371.77 Td
+(end\040try) Tj
+ET
+Q
+Q
+q
+0 0 612 792 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F107831e0d-04e0-4781-b577-030eca15686a 12 Tf
+14.4 TL
+ET
+BT
+/F2 36 Tf
+43.2 TL
+ET
+0.5 g
+/gRLs0 gs
+q
+0.86603 0.5 -0.5 0.86603 300 100 cm
+BT
+1 0 0 1 -257.022 0 Tm
+(SANITIZED\040RESEARCH\040COPY) Tj
+T*
+ET
+Q
+Q
+
+endstream
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000015 00000 n 
+0000000080 00000 n 
+0000000142 00000 n 
+0000000516 00000 n 
+0000000890 00000 n 
+0000000955 00000 n 
+0000001050 00000 n 
+0000001162 00000 n 
+0000008556 00000 n 
+trailer
+<<
+/Size 10
+/Root 5 0 R
+/Info 2 0 R
+>>
+startxref
+12084
+%%EOF
