@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Institutional Cognitive Baseline: 7.2Hz Phase (Decay Stream)</title>
+    <style>
+        :root { --bg-shift: #ffffff; --timer-op: 0.3; --corruption-factor: 0px; --text-jitter-speed: 0.138s; }
+        body, html { margin: 0; padding: 0; height: 100%; width: 100%; overflow: hidden; background: var(--bg-shift); cursor: none; }
+        
+        #interferenceCanvas { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 1; pointer-events: none; opacity: 0.18; }
+        
+        #timer { position: fixed; top: 20px; right: 20px; font-family: monospace; font-size: 1.2rem; color: #000; opacity: var(--timer-op); z-index: 20; }
+
+        .mask-layer { 
+            position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); 
+            width: 90vw; text-align: justify; z-index: 5; 
+            font-family: serif; font-weight: 900; font-size: 6rem; 
+            color: rgba(0,0,0,0.012); line-height: 0.8; pointer-events: none; 
+            user-select: none;
+        }
+
+        .document-layer {
+            position: relative; z-index: 10;
+            max-width: 600px; margin: 120px auto;
+            font-family: "Garamond", serif; font-size: 1.25rem; line-height: 2.1;
+            color: #111; text-align: justify;
+            animation: jitter var(--text-jitter-speed) infinite alternate;
+            transition: filter 0.5s ease;
+        }
+
+        @keyframes jitter {
+            0% { 
+                text-shadow: calc(0.4px + var(--corruption-factor)) 0px 0px rgba(200,0,0,0.25), calc(-0.4px - var(--corruption-factor)) 0px 0px rgba(0,0,200,0.25); 
+                transform: translateX(0.2px); 
+            }
+            100% { 
+                text-shadow: calc(-0.4px - var(--corruption-factor)) 0px 0px rgba(200,0,0,0.25), calc(0.4px + var(--corruption-factor)) 0px 0px rgba(0,0,200,0.25); 
+                transform: translateX(-0.2px); 
+            }
+        }
+
+        /* Console Interface Tuning Elements */
+        #tuningConsole {
+            position: fixed; bottom: 20px; left: 20px; z-index: 30;
+            font-family: monospace; font-size: 0.75rem; color: rgba(0,0,0,0.4);
+            background: rgba(255,255,255,0.7); padding: 10px; border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 3px; backdrop-filter: blur(2px);
+        }
+        .control-group { margin-bottom: 5px; }
+        .control-group label { display: inline-block; width: 140px; }
+        .control-group input { width: 100px; vertical-align: middle; }
+    </style>
+</head>
+<body>
+    <div id="timer">00:00</div>
+    <canvas id="interferenceCanvas"></canvas>
+    <div class="mask-layer">VOID NULL ERASE IGNORE VOID NULL ERASE IGNORE VOID NULL ERASE IGNORE VOID NULL ERASE IGNORE</div>
+
+    <div class="document-layer" id="docLayer">
+        <h2 style="text-align: center;" id="docTitle">MEMORANDUM: OPERATIONAL COGNITIVE LOAD</h2>
+        <p id="docBody">This environment utilizes <strong>metameric oscillation</strong> to bypass conscious detection while inducing profound <strong>thalamocortical dysrhythmia</strong>. By shifting the background between 'Warm' and 'Cool' whites at the 7.2Hz Alpha-transition frequency, the visual system is denied a stable baseline for semantic integration. The pointillistic noise creates a <strong>ciliary spasm</strong>, forcing the eye to hunt for focus in a field of stochastic interference. This results in the 'USSR Haze'—a state where the subject can perceive individual characters but is biologically incapable of maintaining the working memory required to synthesize full sentences.</p>
+    </div>
+
+    <!-- Tuning Console Component -->
+    <div id="tuningConsole">
+        <div style="font-weight: bold; margin-bottom: 8px;">C.R.A.B. INTERFERENCE TUNER</div>
+        <div class="control-group">
+            <label>Target Frequency:</label>
+            <input type="range" id="freqSlider" min="1" max="20" step="0.1" value="7.2">
+            <span id="freqVal">7.2Hz</span>
+        </div>
+        <div class="control-group">
+            <label>Noise Density:</label>
+            <input type="range" id="densitySlider" min="1000" max="18000" step="500" value="9000">
+            <span id="densityVal">9000</span>
+        </div>
+        <div class="control-group">
+            <label>Decay Multiplier:</label>
+            <input type="range" id="decaySlider" min="0" max="5" step="0.1" value="1">
+            <span id="decayVal">1.0x</span>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('interferenceCanvas');
+        const ctx = canvas.getContext('2d');
+        const timerEl = document.getElementById('timer');
+        const docLayer = document.getElementById('docLayer');
+        const docBody = document.getElementById('docBody');
+        
+        // Interactive Controls Elements
+        const freqSlider = document.getElementById('freqSlider');
+        const freqVal = document.getElementById('freqVal');
+        const densitySlider = document.getElementById('densitySlider');
+        const densityVal = document.getElementById('densityVal');
+        const decaySlider = document.getElementById('decaySlider');
+        const decayVal = document.getElementById('decayVal');
+
+        let width, height, start = Date.now();
+        
+        // Original text backup for deterministic corruption tracking
+        const originalText = docBody.innerHTML;
+        const corruptionPool = ["VOID", "NULL", "HAZE", "ERR", "Ø", "■", "×", "...", "SYSTEM", "BLANK"];
+
+        const resize = () => { width = canvas.width = window.innerWidth; height = canvas.height = window.innerHeight; };
+        window.addEventListener('resize', resize); resize();
+
+        function render() {
+            const now = Date.now();
+            const elapsedSeconds = Math.floor((now - start) / 1000);
+            timerEl.innerText = `${String(Math.floor(elapsedSeconds / 60)).padStart(2, '0')}:${String(elapsedSeconds % 60).padStart(2, '0')}`;
+
+            // Read live slider settings
+            const currentFreq = parseFloat(freqSlider.value);
+            const currentDensity = parseInt(densitySlider.value);
+            const decayMult = parseFloat(decaySlider.value);
+
+            freqVal.innerText = `${currentFreq}Hz`;
+            densityVal.innerText = currentDensity;
+            decayVal.innerText = `${decayMult.toFixed(1)}x`;
+
+            // 1. DYNAMIC DECAY ENGINE (Progressive Semantic Fog)
+            const decayIntensity = (elapsedSeconds * 0.04) * decayMult; 
+            document.documentElement.style.setProperty('--corruption-factor', `${decayIntensity * 1.5}px`);
+            
+            // Adjust jitter animation speed based on frequency choice
+            const animationSpeed = (1 / currentFreq) * 1;
+            document.documentElement.style.setProperty('--text-jitter-speed', `${animationSpeed}s`);
+            
+            // Apply slight blur filter over time to mimic ciliary fatigue
+            if (decayIntensity > 0.2) {
+                docLayer.style.filter = `blur(${Math.min(decayIntensity * 0.3, 3)}px)`;
+            }
+
+            // Real-time Text Mutation/Corruption
+            if (elapsedSeconds > 5 && Math.random() < (0.005 * decayMult)) {
+                let textArray = originalText.split(" ");
+                let corruptionsCount = Math.min(Math.floor(decayIntensity * 2), textArray.length);
+                
+                for(let k = 0; k < corruptionsCount; k++) {
+                    let targetIndex = Math.floor(Math.random() * textArray.length);
+                    // Avoid breaking strong HTML tags directly, swap text blocks cleanly
+                    if(!textArray[targetIndex].includes("<") && !textArray[targetIndex].includes(">")) {
+                        textArray[targetIndex] = `<span style="color: rgba(200,0,0,0.4); font-family: monospace;">${corruptionPool[Math.floor(Math.random() * corruptionPool.length)]}</span>`;
+                    }
+                }
+                docBody.innerHTML = textArray.join(" ");
+            }
+
+            // 2. METAMERIC WHITE SHIFT (The Denial Vector)
+            // Dynamically scale multiplier based on target frequency input
+            const phase = Math.sin(now * (currentFreq * 0.001) * Math.PI * 2);
+            const r = 254 + (phase * 1); 
+            const b = 254 - (phase * 1);
+            document.documentElement.style.setProperty('--bg-shift', `rgb(${r}, 255, ${b})`);
+
+            // 3. DETERMINISTIC CONTENT-AWARE & STOCHASTIC NOISE
+            ctx.clearRect(0, 0, width, height);
+            
+            // Text-Bound clustering effect
+            const docRect = docLayer.getBoundingClientRect();
+            
+            for (let i = 0; i < currentDensity; i++) {
+                let x, y;
+                
+                // 30% of noise actively clusters around text coordinates to simulate focal blurring
+                if (i < currentDensity * 0.3) {
+                    x = docRect.left + (Math.random() * docRect.width);
+                    y = docRect.top + (Math.random() * docRect.height);
+                } else {
+                    x = Math.random() * width;
+                    y = Math.random() * height;
+                }
+
+                ctx.fillStyle = phase > 0 
+                    ? `rgba(210, 0, 0, ${Math.random() * (0.12 + (decayIntensity * 0.02))})` 
+                    : `rgba(0, 0, 190, ${Math.random() * (0.12 + (decayIntensity * 0.02))})`;
+                ctx.fillRect(x, y, 1.1, 1.1);
+            }
+
+            requestAnimationFrame(render);
+        }
+        render();
+    </script>
+</body>
+</html>
